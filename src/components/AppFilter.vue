@@ -19,7 +19,7 @@ export default defineComponent({
     }
   },
   methods: {
-    setFilter(filter: Filter){
+    setFilter(filter: Filter) {
       this.$emit('setFilter', filter)
     }
   },
@@ -36,7 +36,9 @@ export default defineComponent({
               :key="filter"
               class="button"
               :class="{'button--primary': activeFilter === filter}"
-              @click="setFilter(filter)">{{ filter }}</button>
+              @click="setFilter(filter)"
+      >{{ filter }}
+      </button>
     </section>
   </aside>
 </template>
